@@ -1,8 +1,9 @@
 import telebot
-import parse
 from telebot import types
+import parse
+import config
 
-bot = telebot.TeleBot('5591112751:AAG5kRQfwTFtyJujFHROEa0oXZEkZ2B0XK8')
+bot = telebot.TeleBot(config.TELEGRAM_API_TOKEN)
 
 
 @bot.message_handler(commands=['start'])
