@@ -1,3 +1,4 @@
+'''Поиск заданий, парсинг сайта'''
 from bs4 import BeautifulSoup
 import requests
 

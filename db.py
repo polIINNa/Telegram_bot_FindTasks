@@ -21,3 +21,11 @@ def fetchall():
     earn_list = cursor.fetchall()
     return earn_list
 
+
+def delete():
+    cursor.execute(
+        'DELETE FROM done_tasks'
+    )
+    connection.commit()
+
+

@@ -16,7 +16,10 @@ def add_earning(raw_price: str) -> Earning:
     )
 
 
-def show_earnings() -> List[Earning]:
+def all_earnings() -> List[Earning]:
     rows = db.fetchall()
-    earnings = [Earning(price=row[0]) for row in rows]
+    if rows != [()]:
+        earnings = [Earning(price=row[0]) for row in rows]
+    else:
+        earnings = [Earning(price=0)]
     return earnings
